@@ -3,7 +3,7 @@ window.PORTFOLIO = {
     name: "Zhaoyou Liu",
     shortName: "Zhaoyou Liu",
     role: "Game Engineering MSc | Gameplay, AI, and Rendering Programmer",
-    availability: "Open to gameplay, game AI, and rendering roles",
+    availability: "Game engineering portfolio",
     summary:
       "I build interactive game systems with a focus on believable enemy behaviour, real-time rendering, and practical C++/UE5 production work.",
     pitch:
@@ -13,7 +13,7 @@ window.PORTFOLIO = {
     workingStyle:
       "I like to turn course briefs and design ideas into playable, inspectable systems with clear technical ownership.",
     contactNote:
-      "Available for game programming, gameplay engineering, game AI, rendering, and technical prototyping opportunities.",
+      "If my CV or project work is relevant to your team, please feel free to contact me by email or GitHub.",
     location: "Coventry, United Kingdom",
   },
   metrics: [
@@ -27,23 +27,30 @@ window.PORTFOLIO = {
       type: "Featured Game Project",
       period: "2026",
       featured: true,
-      cover: "assets/projects/skyfire/gameplay-boss-skill.jpg",
-      coverAlt: "SkyFire boss encounter gameplay with ability effects and combat UI.",
+      cover: "assets/projects/skyfire/nova-boss-encounter.jpg",
+      coverAlt: "SkyFire Nova boss skill with large area effects, combat UI, and the Boss visible in the arena.",
       summary:
-        "A UE5 team game project where I owned the enemy side of the level: normal enemies, Boss behaviour, ability logic, UI feedback, BGM switching, sound cues, and the level-completion trigger.",
+        "A UE5 team game project where I owned almost the full enemy and Boss combat package: normal enemies, Boss AI, ability logic, animation binding, UI feedback, voice lines, BGM transitions, sound cues, and the level-completion trigger.",
       impact:
-        "Built a complete multi-phase Boss encounter with patrol/chase/attack logic, dodgeable projectiles, teleport anchors, large-area skills, GAS-based HP/damage handling, and phase-specific audio/visual feedback.",
-      stack: ["Unreal Engine 5", "C++", "Blueprints", "Gameplay Ability System", "Behavior Trees", "UI/HUD", "Sound Cue"],
+        "Built a complete multi-phase Boss encounter with patrol/chase/attack logic, dodgeable projectiles, teleport anchors, Nova and SkyTornado phase skills, GAS-based HP/damage handling, custom audio timing, and phase-specific visual feedback.",
+      stack: ["Unreal Engine 5", "C++", "Blueprints", "Gameplay Ability System", "Behavior Trees", "Animation", "BGM", "Sound Cue"],
       highlights: [
-        "Implemented enemy controllers and Boss behaviour using C++ classes, UE5 Blueprints, Behavior Trees, and GAS integration.",
-        "Designed melee hit windows, ranged projectiles, teleport-driven pressure, phase transition logic, and Boss skills such as Nova and SkyTornado.",
-        "Connected combat systems to player feedback through health bars, BGM transitions, spatial sound cues, and a post-Boss level trigger.",
+        "Implemented normal enemy and Boss behaviour through C++ controllers, UE5 Blueprints, Behavior Trees, and Gameplay Ability System integration.",
+        "Designed the Boss as a two-phase encounter: teleport pressure in Phase 1, Nova as the phase-transition ritual, and SkyTornado plus enhanced projectile pressure in Phase 2.",
+        "Bound combat logic to animation timing, including melee hit windows, death animations, skill casting sequences, and temporary HP-lock states during major Boss abilities.",
+        "Produced the encounter's audio layer, including Boss voice lines, 3D sound cues, skill sound effects, and staged BGM switching between exploration, Boss fight, and Phase 2.",
+        "Connected the Boss defeat state to UI feedback, waypoint activation, and the final level-completion trigger.",
       ],
       gallery: [
         {
-          src: "assets/projects/skyfire/gameplay-boss-skill.jpg",
-          alt: "Boss skill effects during the SkyFire encounter.",
-          caption: "Boss encounter gameplay and combat UI.",
+          src: "assets/projects/skyfire/nova-boss-encounter.jpg",
+          alt: "Nova boss skill with full-screen visual pressure and combat UI.",
+          caption: "Nova: a large-area phase-transition skill that forces the player to use cover.",
+        },
+        {
+          src: "assets/projects/skyfire/skytornado-phase2.jpg",
+          alt: "SkyTornado phase two skill with multiple elemental tornado effects in the arena.",
+          caption: "SkyTornado: Phase 2 arena pressure using multiple spawned storm effects.",
         },
         {
           src: "assets/projects/skyfire/enemy-hit-window.jpg",
