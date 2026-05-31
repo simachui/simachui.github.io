@@ -10,12 +10,23 @@ const createElement = (tag, className, text) => {
   return element;
 };
 
+const createImage = (src, alt, className) => {
+  if (!src) return null;
+  const image = document.createElement("img");
+  image.src = src;
+  image.alt = alt || "";
+  image.loading = "lazy";
+  image.decoding = "async";
+  if (className) image.className = className;
+  return image;
+};
+
 const bindProfileText = () => {
   allBySelector("[data-profile]").forEach((element) => {
     const key = element.dataset.profile;
     element.textContent = portfolio.profile[key] || "";
   });
-  document.title = `${portfolio.profile.name} | 个人简历与作品集`;
+  document.title = `${portfolio.profile.name} | Game Engineering Portfolio`;
 };
 
 const renderMetrics = () => {
@@ -35,7 +46,7 @@ const renderMetrics = () => {
 const renderProjects = () => {
   const target = bySelector("[data-projects]");
   const cards = portfolio.projects.map((project, index) => {
-    const article = createElement("article", "project-card");
+    const article = createElement("article", project.featured ? "project-card project-featured" : "project-card");
     article.style.setProperty("--accent-index", index % 4);
 
     const meta = createElement("div", "project-meta");
@@ -55,14 +66,46 @@ const renderProjects = () => {
       links.append(anchor);
     });
 
-    article.append(
+    const content = createElement("div", "project-content");
+    content.append(
       meta,
       createElement("h3", "", project.title),
       createElement("p", "project-summary", project.summary),
       createElement("p", "project-impact", project.impact),
-      stack,
-      links,
     );
+
+    if (project.highlights?.length) {
+      const highlights = createElement("ul", "project-highlights");
+      highlights.append(...project.highlights.map((item) => createElement("li", "", item)));
+      content.append(highlights);
+    }
+
+    content.append(stack);
+    if ((project.links || []).length) {
+      content.append(links);
+    }
+
+    if (project.cover) {
+      const media = createElement("div", "project-media");
+      media.append(createImage(project.cover, project.coverAlt, ""));
+      article.append(media);
+    }
+
+    article.append(content);
+
+    if (project.gallery?.length) {
+      const gallery = createElement("div", "project-gallery");
+      project.gallery.forEach((item) => {
+        const figure = createElement("figure", "");
+        figure.append(
+          createImage(item.src, item.alt, ""),
+          createElement("figcaption", "", item.caption),
+        );
+        gallery.append(figure);
+      });
+      article.append(gallery);
+    }
+
     return article;
   });
   target.replaceChildren(...cards);
@@ -70,6 +113,7 @@ const renderProjects = () => {
 
 const renderExperience = () => {
   const target = bySelector("[data-experience]");
+  if (!target || !portfolio.experience?.length) return;
   const entries = portfolio.experience.map((item) => {
     const article = createElement("article", "timeline-item");
     const header = createElement("div", "timeline-header");
@@ -88,6 +132,7 @@ const renderExperience = () => {
 
 const renderSkills = () => {
   const target = bySelector("[data-skills]");
+  if (!target) return;
   const groups = portfolio.skills.map((group) => {
     const article = createElement("article", "skill-group");
     const list = createElement("div", "tag-row");
@@ -100,6 +145,7 @@ const renderSkills = () => {
 
 const renderEducation = () => {
   const target = bySelector("[data-education]");
+  if (!target) return;
   const items = portfolio.education.map((item) => {
     const article = createElement("article", "education-item");
     article.append(
@@ -115,6 +161,7 @@ const renderEducation = () => {
 
 const renderLinks = () => {
   const target = bySelector("[data-links]");
+  if (!target) return;
   const links = portfolio.links.map((link) => {
     const anchor = createElement("a", "contact-link", link.label);
     anchor.href = link.href;
@@ -133,7 +180,7 @@ const setupInteractions = () => {
 
   menuButton.addEventListener("click", () => {
     const isOpen = header.classList.toggle("is-open");
-    menuButton.setAttribute("aria-label", isOpen ? "关闭导航" : "打开导航");
+    menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
   });
 
   allBySelector(".nav-links a").forEach((anchor) => {
@@ -149,7 +196,6 @@ const setupInteractions = () => {
 bindProfileText();
 renderMetrics();
 renderProjects();
-renderExperience();
 renderSkills();
 renderEducation();
 renderLinks();

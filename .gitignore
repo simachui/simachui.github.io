@@ -1,0 +1,4 @@
+assets/projects/**/*.png
+assets/projects/**/*.ppm
+assets/projects/**/*.pgm
+assets/projects/**/*.pbm

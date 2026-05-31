@@ -1,23 +1,24 @@
-# 个人简历与作品集网站
+# Zhaoyou Liu Portfolio Site
 
-这是一个静态个人网站，可以直接用浏览器打开 `index.html`。
+Static portfolio website for game engineering projects. It can be opened directly in a browser from `index.html` and deployed to GitHub Pages.
 
-## 修改内容
+## Structure
 
-- 编辑 `content.js`：替换姓名、简介、项目、经历、技能、教育和联系方式。
-- 替换 `assets/hero-portfolio.png`：更换首页背景图。
-- 编辑 `styles.css`：调整颜色、排版和间距。
+- `content.js`: profile, project descriptions, skills, education, and contact links.
+- `app.js`: renders project cards, screenshot galleries, skills, education, and contact actions.
+- `styles.css`: layout, responsive styles, and visual design.
+- `assets/projects/`: report screenshots and selected web-ready images.
 
-## 本地查看
+## Local Preview
 
-直接双击 `index.html`，或在浏览器中打开：
+Open this file in a browser:
 
 ```text
 C:\Users\Y7000P\personal-portfolio-site\index.html
 ```
 
-页面里的“导出简历”按钮会调用浏览器打印功能，可以保存为 PDF。
+The `Print Profile` button uses the browser print dialog and can save the page as a PDF.
 
-## 发布
+## Deployment
 
-这个目录可以直接部署到 GitHub Pages、Netlify、Vercel 或任何静态网站托管服务。
+For GitHub Pages, copy the files in this directory into the `simachui.github.io` repository root, commit them in GitHub Desktop, publish the repository, and enable Pages from the `main` branch.

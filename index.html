@@ -1,31 +1,31 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>你的姓名 | 个人简历与作品集</title>
+    <title>Zhaoyou Liu | Game Engineering Portfolio</title>
     <meta
       name="description"
-      content="个人简历与作品集网站，展示项目、经历、技能和联系方式。"
+      content="Game engineering portfolio for Zhaoyou Liu, featuring UE5 gameplay systems, game AI, rendering, and C++ projects."
     />
-    <link rel="preload" href="assets/hero-portfolio.png" as="image" />
+    <link rel="preload" href="assets/projects/skyfire/gameplay-boss-skill.jpg" as="image" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="content.js"></script>
     <script defer src="app.js"></script>
   </head>
   <body>
     <header class="site-header" data-nav>
-      <a class="brand" href="#top" aria-label="返回顶部">
+      <a class="brand" href="#top" aria-label="Back to top">
         <span class="brand-mark" aria-hidden="true"></span>
-        <span data-profile="shortName">你的姓名</span>
+        <span data-profile="shortName">Zhaoyou Liu</span>
       </a>
-      <nav class="nav-links" aria-label="页面导航">
-        <a href="#projects">作品</a>
-        <a href="#experience">经历</a>
-        <a href="#skills">技能</a>
-        <a href="#contact">联系</a>
+      <nav class="nav-links" aria-label="Page navigation">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <button class="icon-button menu-button" type="button" aria-label="打开导航" data-menu-button>
+      <button class="icon-button menu-button" type="button" aria-label="Open navigation" data-menu-button>
         <span></span>
         <span></span>
       </button>
@@ -36,15 +36,15 @@
         <div class="hero-media" aria-hidden="true"></div>
         <div class="hero-overlay"></div>
         <div class="hero-inner">
-          <p class="eyebrow" data-profile="availability">正在寻找新的合作机会</p>
-          <h1 id="hero-title" data-profile="name">你的姓名</h1>
-          <p class="hero-role" data-profile="role">产品型前端工程师 / AI 应用开发者</p>
+          <p class="eyebrow" data-profile="availability">Open to gameplay, game AI, and rendering roles</p>
+          <h1 id="hero-title" data-profile="name">Zhaoyou Liu</h1>
+          <p class="hero-role" data-profile="role">Game Engineering MSc | Gameplay, AI, and Rendering Programmer</p>
           <p class="hero-summary" data-profile="summary">
-            我把复杂问题拆成清晰的产品体验，用工程能力把想法推进到可交付的作品。
+            I build interactive game systems with a focus on believable enemy behaviour, real-time rendering, and practical C++/UE5 production work.
           </p>
           <div class="hero-actions">
-            <a class="primary-action" href="#projects">查看作品</a>
-            <button class="secondary-action" type="button" data-print>导出简历</button>
+            <a class="primary-action" href="#projects">View Projects</a>
+            <button class="secondary-action" type="button" data-print>Print Profile</button>
           </div>
           <div class="metrics" data-metrics></div>
         </div>
@@ -53,25 +53,25 @@
       <section class="section intro-section" aria-labelledby="intro-title">
         <div class="section-heading">
           <p class="eyebrow">Profile</p>
-          <h2 id="intro-title">简历摘要</h2>
+          <h2 id="intro-title">Profile Snapshot</h2>
         </div>
         <div class="intro-grid">
           <article class="profile-panel">
-            <h3>定位</h3>
+            <h3>Direction</h3>
             <p data-profile="pitch">
-              适合把技术、业务和用户体验串起来的岗位：前端开发、AI 产品工程、数据可视化或全栈原型。
+              My strongest work sits between gameplay engineering and technical systems.
             </p>
           </article>
           <article class="profile-panel">
-            <h3>当前重点</h3>
+            <h3>Current Focus</h3>
             <p data-profile="focus">
-              构建可解释、可维护、能真实落地的 Web 产品和智能工具。
+              Boss combat systems, gameplay ability workflows, rendering pipelines, and portfolio-ready game prototypes.
             </p>
           </article>
           <article class="profile-panel">
-            <h3>偏好的工作方式</h3>
+            <h3>Working Style</h3>
             <p data-profile="workingStyle">
-              快速澄清目标，先做可验证版本，再通过数据和反馈迭代。
+              I turn design ideas into playable, inspectable systems with clear technical ownership.
             </p>
           </article>
         </div>
@@ -81,36 +81,28 @@
         <div class="section-heading split-heading">
           <div>
             <p class="eyebrow">Portfolio</p>
-            <h2 id="projects-title">精选作品</h2>
+            <h2 id="projects-title">Selected Projects</h2>
           </div>
-          <p class="section-note">按影响、技术深度和完整度排序。</p>
+          <p class="section-note">Screenshots are taken from coursework reports and selected to show playable output as well as implementation depth.</p>
         </div>
         <div class="project-grid" data-projects></div>
-      </section>
-
-      <section class="section timeline-section" id="experience" aria-labelledby="experience-title">
-        <div class="section-heading">
-          <p class="eyebrow">Experience</p>
-          <h2 id="experience-title">经历</h2>
-        </div>
-        <div class="timeline" data-experience></div>
       </section>
 
       <section class="section skills-section" id="skills" aria-labelledby="skills-title">
         <div class="section-heading split-heading">
           <div>
             <p class="eyebrow">Skills</p>
-            <h2 id="skills-title">能力结构</h2>
+            <h2 id="skills-title">Technical Skills</h2>
           </div>
-          <p class="section-note">把技能按实际工作流分组，方便快速扫描。</p>
+          <p class="section-note">Grouped around the systems used in the projects above.</p>
         </div>
         <div class="skills-grid" data-skills></div>
       </section>
 
-      <section class="section education-section" aria-labelledby="education-title">
+      <section class="section education-section" id="education" aria-labelledby="education-title">
         <div class="section-heading">
           <p class="eyebrow">Education</p>
-          <h2 id="education-title">教育与认证</h2>
+          <h2 id="education-title">Education</h2>
         </div>
         <div class="education-list" data-education></div>
       </section>
@@ -119,9 +111,9 @@
         <div class="contact-inner">
           <div>
             <p class="eyebrow">Contact</p>
-            <h2 id="contact-title">一起推进下一个项目</h2>
+            <h2 id="contact-title">Get in Touch</h2>
             <p data-profile="contactNote">
-              适合聊产品原型、Web 应用、AI 工具、作品集合作和全职机会。
+              Available for game programming, gameplay engineering, game AI, rendering, and technical prototyping opportunities.
             </p>
           </div>
           <div class="contact-actions" data-links></div>
@@ -131,7 +123,7 @@
 
     <footer class="site-footer">
       <span data-footer></span>
-      <a href="#top">返回顶部</a>
+      <a href="#top">Back to top</a>
     </footer>
   </body>
 </html>
