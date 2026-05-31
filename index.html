@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>你的姓名 | 个人简历与作品集</title>
+    <meta
+      name="description"
+      content="个人简历与作品集网站，展示项目、经历、技能和联系方式。"
+    />
+    <link rel="preload" href="assets/hero-portfolio.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="content.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="site-header" data-nav>
+      <a class="brand" href="#top" aria-label="返回顶部">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span data-profile="shortName">你的姓名</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#projects">作品</a>
+        <a href="#experience">经历</a>
+        <a href="#skills">技能</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <button class="icon-button menu-button" type="button" aria-label="打开导航" data-menu-button>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+          <p class="eyebrow" data-profile="availability">正在寻找新的合作机会</p>
+          <h1 id="hero-title" data-profile="name">你的姓名</h1>
+          <p class="hero-role" data-profile="role">产品型前端工程师 / AI 应用开发者</p>
+          <p class="hero-summary" data-profile="summary">
+            我把复杂问题拆成清晰的产品体验，用工程能力把想法推进到可交付的作品。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#projects">查看作品</a>
+            <button class="secondary-action" type="button" data-print>导出简历</button>
+          </div>
+          <div class="metrics" data-metrics></div>
+        </div>
+      </section>
+
+      <section class="section intro-section" aria-labelledby="intro-title">
+        <div class="section-heading">
+          <p class="eyebrow">Profile</p>
+          <h2 id="intro-title">简历摘要</h2>
+        </div>
+        <div class="intro-grid">
+          <article class="profile-panel">
+            <h3>定位</h3>
+            <p data-profile="pitch">
+              适合把技术、业务和用户体验串起来的岗位：前端开发、AI 产品工程、数据可视化或全栈原型。
+            </p>
+          </article>
+          <article class="profile-panel">
+            <h3>当前重点</h3>
+            <p data-profile="focus">
+              构建可解释、可维护、能真实落地的 Web 产品和智能工具。
+            </p>
+          </article>
+          <article class="profile-panel">
+            <h3>偏好的工作方式</h3>
+            <p data-profile="workingStyle">
+              快速澄清目标，先做可验证版本，再通过数据和反馈迭代。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Portfolio</p>
+            <h2 id="projects-title">精选作品</h2>
+          </div>
+          <p class="section-note">按影响、技术深度和完整度排序。</p>
+        </div>
+        <div class="project-grid" data-projects></div>
+      </section>
+
+      <section class="section timeline-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2 id="experience-title">经历</h2>
+        </div>
+        <div class="timeline" data-experience></div>
+      </section>
+
+      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Skills</p>
+            <h2 id="skills-title">能力结构</h2>
+          </div>
+          <p class="section-note">把技能按实际工作流分组，方便快速扫描。</p>
+        </div>
+        <div class="skills-grid" data-skills></div>
+      </section>
+
+      <section class="section education-section" aria-labelledby="education-title">
+        <div class="section-heading">
+          <p class="eyebrow">Education</p>
+          <h2 id="education-title">教育与认证</h2>
+        </div>
+        <div class="education-list" data-education></div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-inner">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">一起推进下一个项目</h2>
+            <p data-profile="contactNote">
+              适合聊产品原型、Web 应用、AI 工具、作品集合作和全职机会。
+            </p>
+          </div>
+          <div class="contact-actions" data-links></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span data-footer></span>
+      <a href="#top">返回顶部</a>
+    </footer>
+  </body>
+</html>
