@@ -46,7 +46,10 @@ const renderMetrics = () => {
 const renderProjects = () => {
   const target = bySelector("[data-projects]");
   const cards = portfolio.projects.map((project, index) => {
-    const article = createElement("article", project.featured ? "project-card project-featured" : "project-card");
+    const articleClasses = ["project-card"];
+    if (project.featured) articleClasses.push("project-featured");
+    if (!project.cover) articleClasses.push("project-no-cover");
+    const article = createElement("article", articleClasses.join(" "));
     article.style.setProperty("--accent-index", index % 4);
 
     const meta = createElement("div", "project-meta");

@@ -27,8 +27,8 @@ window.PORTFOLIO = {
       type: "Featured Game Project",
       period: "2026",
       featured: true,
-      cover: "assets/projects/skyfire/nova-boss-encounter.jpg",
-      coverAlt: "SkyFire Nova boss skill with large area effects, combat UI, and the Boss visible in the arena.",
+      cover: "",
+      coverAlt: "",
       summary:
         "A UE5 team game project where I owned almost the full enemy and Boss combat package: normal enemies, Boss AI, ability logic, animation binding, UI feedback, voice lines, BGM transitions, sound cues, and the level-completion trigger.",
       impact:

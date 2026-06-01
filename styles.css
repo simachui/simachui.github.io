@@ -461,6 +461,21 @@ h3 {
   padding: 0 30px 30px 0;
 }
 
+.project-featured.project-no-cover {
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: 30px;
+}
+
+.project-featured.project-no-cover .project-content,
+.project-featured.project-no-cover .project-gallery {
+  padding: 0;
+}
+
+.project-featured.project-no-cover .project-gallery {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .tag-row {
   display: flex;
   flex-wrap: wrap;
