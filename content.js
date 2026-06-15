@@ -71,20 +71,20 @@ window.PORTFOLIO = {
       links: [],
     },
     {
-      title: "Personal Game Demo",
+      title: "A Dream Called Isekai: CRPG Demo",
       type: "Personal Game Project",
       period: "2026",
       video: {
         title: "Gameplay Demo",
-        src: "assets/videos/personal-game-demo-web.mp4?v=20260616a",
+        src: "assets/videos/personal-game-demo-web.mp4?v=20260616b",
         caption:
-          "A gameplay capture from my own game demo. This project is presented separately from the SkyFire team project.",
+          "A short capture from my personal CRPG-style demo prototype.",
       },
       summary:
-        "A self-developed game demo focused on presenting a playable prototype loop, player-facing feedback, and the feel of an in-engine game experience.",
+        "I am experimenting with a simple CRPG-style game demo in Unreal Engine 5. Most character and environment model assets in the prototype are sourced from online resources.",
       impact:
-        "Prepared a web-ready gameplay video so the project can be inspected directly from the portfolio site.",
-      stack: ["Personal Project", "Game Prototype", "Gameplay Programming", "UI Feedback", "Video Capture"],
+        "Current progress: BG3-style top-down camera, click interaction, pickup and inventory flow, save/load framework, character creation skeleton, alchemy station logic, and an early turn-based combat framework.",
+      stack: ["Unreal Engine 5.6", "C++", "CRPG Prototype", "Inventory", "Save/Load", "Alchemy", "Turn-Based Combat"],
       links: [],
     },
     {
