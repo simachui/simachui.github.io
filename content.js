@@ -17,7 +17,7 @@ window.PORTFOLIO = {
     location: "Coventry, United Kingdom",
   },
   metrics: [
-    { value: "5", label: "selected projects" },
+    { value: "6", label: "selected projects" },
     { value: "UE5", label: "current game engine focus" },
     { value: "C++", label: "core programming language" },
   ],
@@ -68,6 +68,23 @@ window.PORTFOLIO = {
           caption: "Level-completion trigger and waypoint activation.",
         },
       ],
+      links: [],
+    },
+    {
+      title: "Personal Game Demo",
+      type: "Personal Game Project",
+      period: "2026",
+      video: {
+        title: "Gameplay Demo",
+        src: "assets/videos/personal-game-demo-web.mp4?v=20260616a",
+        caption:
+          "A gameplay capture from my own game demo. This project is presented separately from the SkyFire team project.",
+      },
+      summary:
+        "A self-developed game demo focused on presenting a playable prototype loop, player-facing feedback, and the feel of an in-engine game experience.",
+      impact:
+        "Prepared a web-ready gameplay video so the project can be inspected directly from the portfolio site.",
+      stack: ["Personal Project", "Game Prototype", "Gameplay Programming", "UI Feedback", "Video Capture"],
       links: [],
     },
     {

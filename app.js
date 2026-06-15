@@ -83,6 +83,27 @@ const renderProjects = () => {
       content.append(highlights);
     }
 
+    if (project.video?.src) {
+      const videoBlock = createElement("div", "project-video");
+      const videoTitle = createElement("h4", "project-video-title", project.video.title || "Demo Video");
+      const video = document.createElement("video");
+      video.controls = true;
+      video.preload = "metadata";
+      video.playsInline = true;
+      if (project.video.poster) video.poster = project.video.poster;
+
+      const source = document.createElement("source");
+      source.src = project.video.src;
+      source.type = "video/mp4";
+      video.append(source, "Your browser does not support HTML5 video.");
+
+      videoBlock.append(videoTitle, video);
+      if (project.video.caption) {
+        videoBlock.append(createElement("p", "project-video-caption", project.video.caption));
+      }
+      content.append(videoBlock);
+    }
+
     content.append(stack);
     if ((project.links || []).length) {
       content.append(links);
